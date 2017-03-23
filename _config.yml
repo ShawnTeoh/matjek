@@ -16,7 +16,8 @@
 title: matjek
 description: > # this means to ignore newlines until "baseurl:"
   Material theme based on Materialize.css for jekyll sites
-url: "http://shawnteoh.github.io/matjek"
+baseurl: ""
+url: "https://shawnteoh.github.io/matjek"
 
 # Build settings
 markdown: kramdown
