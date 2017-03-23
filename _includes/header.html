@@ -3,36 +3,51 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% if page.title %}
+        {{ page.title | escape }}
+      {% else %}
+        {{ site.title | escape }}
+      {% endif %}
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/assets/res/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+    <link rel="stylesheet" href="{{site.url}}/css/style.css">
+    <link rel="stylesheet" href="{{site.url}}/css/syntax.css">
   </head>
   <body>
     <header>
-      <nav class="top-nav">
+      <div class="navbar-fixed"><nav class="top-nav teal">
         <div class="nav-wrapper">
           <div class="container">
-            <a class="page-title">SideNav</a>
+            <a class="page-title" href="{{site.url}}">{{site.title}}</a>
           </div>
         </div>
-      </nav>
+      </nav></div>
+      <div class="container">
+        <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
       <ul id="slide-out" class="side-nav fixed">
         <li>
           <div class="userView">
             <div class="background">
-              <img src="{{ site.baseurl }}/assets/res/bg.jpg">
+              <img src="{{site.url}}/assets/res/bg.jpg">
             </div>
-            <a href="#!user"><img class="circle" src="{{ site.baseurl }}/assets/res/user.png"></a>
-            <a href="#!name"><span class="white-text name">John Doe</span></a>
-            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            <a href="{{site.github_profile}}"><img class="circle" src="{{site.baseurl}}/assets/res/user.png"></a>
+            <span class="white-text name">John Doe</span>
+            <span class="white-text email">john@doe.com</span>
           </div>
         </li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="#!">Second Link</a></li>
+        <li><a class="waves-effect" href="{{site.url}}"><i class="material-icons">home</i>Home</a></li>
+        <li><a class="waves-effect" href="#"><i class="material-icons">description</i>Projects</a></li>
+        <li><a class="waves-effect" href="#"><i class="material-icons">sort</i>Categories</a></li>
+        <li><a class="waves-effect" href="#"><i class="material-icons">label</i>Tags</a></li>
+        <li><a class="waves-effect" href="{{site.url}}/feed.xml"><i class="material-icons">rss_feed</i>RSS</a></li>
         <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        <li><a class="waves-effect" href="{{site.url}}"><i class="material-icons">person</i>About</a></li>
       </ul>
-      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     </header>
     <main>

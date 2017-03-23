@@ -1,0 +1,87 @@
+---
+---
+// Overall
+body
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+
+a
+  color: #1a237e
+
+a:hover
+  text-decoration: underline
+
+a:active
+  text-decoration: underline
+
+main
+  flex: 1 0 auto
+
+header,
+main,
+footer
+  padding-left: 280px
+
+.container
+  width: 90%
+
+// Header
+header
+  height: 80px
+
+  a:hover
+    text-decoration: none
+
+a.button-collapse.top-nav
+  position: fixed
+  text-align: center
+  height: 48px
+  width: 48px
+  top: 0
+  float: none
+  color: #fff
+  font-size: 36px
+  z-index: 999
+  line-height: 80px
+
+nav 
+  .page-title
+    font-size: 36px
+
+nav.top-nav
+  height: 80px
+  
+  .page-title
+    line-height: 80px
+
+// Content
+main
+  div
+    .row
+      margin-top: 20px
+
+.post-info
+  span,
+  .material-icons
+    font-size: 14px
+
+// Footer
+footer.page-footer
+  margin-top: 10px
+
+  .row
+    margin-bottom: 0px
+
+  p
+    margin-top: 5px
+
+@media only screen and (max-width: 992px)
+  header,
+  main,
+  footer
+    padding-left: 0
+
+  nav 
+  .nav-wrapper
+    text-align: center
