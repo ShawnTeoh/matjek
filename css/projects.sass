@@ -1,15 +1,16 @@
 ---
 ---
 .card-image
-  display: flex
   height: 10em
   width: 100%
   overflow-x: hidden
 
   i
     color: #fff
+    padding: 10px
 
 .card
+  margin-top: 20px
   .card-content
     height: 7em
     overflow: hidden
@@ -24,13 +25,25 @@
       font-weight: bold
       color: #fff
       width: 100%
-      height: auto
-      padding: 0
+      height: 100%
       line-height: 100%
-      position: inherit
       justify-content: center
+      z-index: -1
 
   .card-reveal
     .card-reveal-content
-      position: absolute
-      float:none
+      display: block
+
+      span.card-title
+        font-weight: bold
+        padding-bottom: 19px
+
+      span.tooltipped
+        display: block
+        padding-top: 5px
+        padding-bottom: 5px
+        font-size: 16px
+
+        i
+          font-size: 12px
+          margin-right: 10px
