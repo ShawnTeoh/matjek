@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{{site.url}}/css/style.css">
     {% for css in layout.css %}
-    {% if js contains "://" %}
+    {% if css contains "://" %}
     <link rel="stylesheet" href="{{css}}">
     {% else %}
     <link rel="stylesheet" href="{{site.url}}/css/{{css}}">
     {% endif %}
     {% endfor %}
     {% for css in page.css %}
-    {% if js contains "://" %}
+    {% if css contains "://" %}
     <link rel="stylesheet" href="{{css}}">
     {% else %}
     <link rel="stylesheet" href="{{site.url}}/css/{{css}}">
