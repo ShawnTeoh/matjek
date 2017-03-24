@@ -19,6 +19,8 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://shawnteoh.github.io/matjek"
 github_profile: "https://github.com/ShawnTeoh"
+user: "John Doe"
+user_email: "john@doe.com"
 contact_url: "https://goo.gl/tVljbV"
 repository: ShawnTeoh/matjek
 permalink: /:year/:month/:day/:title
