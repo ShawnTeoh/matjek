@@ -1,8 +1,30 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
-<script>
-  $(document).ready(function(){
-    $('.geopattern').each(function(){
-      $(this).geopattern($(this).data('pattern-id'));
-    });
-  });
-</script>
+{% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse  %}
+{% for repo in sorted_repos %}
+<div class="col s12 m6 l4">
+  <div class="card hoverable">
+    <div class="card-image waves-effect waves-block waves-light geopattern activator" data-pattern-id="{{repo.name}}">
+      <i class="material-icons">more_vert</i><a class="card-title center-align valign-wrapper" href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
+    </div>
+    <div class="card-content valign-wrapper center-align">
+      <span class="activator grey-text text-darken-1">{{repo.description}}</span>
+    </div>
+    <div class="card-reveal">
+      <div class="card-reveal-content">
+        <span class="card-title grey-text text-darken-4">Stats:<i class="material-icons right">close</i></span>
+        <span class="tooltipped" data-position="bottom" data-delay="30" data-tooltip="{{repo.stargazers_count}} stars">
+          <i class="material-icons">star_rate</i>
+          {{repo.stargazers_count}}
+        </span>
+        <span class="tooltipped" data-position="bottom" data-delay="30" data-tooltip="{{repo.forks_count}} forks">
+          <i class="material-icons">call_split</i>
+          {{repo.forks_count}}
+        </span>
+        <span class="tooltipped" data-position="bottom" data-delay="30" data-tooltip="Last updated：{{repo.updated_at}}">
+          <i class="material-icons">access_time</i>
+          <time datetime="{{repo.updated_at}}" title="{{repo.updated_at}}">{{repo.updated_at | date: '%Y-%m-%d'}}</time>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}

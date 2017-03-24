@@ -17,5 +17,19 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
     <script src="{{site.url}}/assets/js/main.js"></script>
+    {% for js in layout.js %}
+    {% if js contains "://" %}
+    <script src="{{js}}"></script>
+    {% else %}
+    <script src="{{site.url}}/{{js}}"></script>
+    {% endif %}
+    {% endfor %}
+    {% for js in page.js %}
+    {% if js contains "://" %}
+    <script src="{{js}}"></script>
+    {% else %}
+    <script src="{{site.url}}/{{js}}"></script>
+    {% endif %}
+    {% endfor %}
   </body>
 </html>

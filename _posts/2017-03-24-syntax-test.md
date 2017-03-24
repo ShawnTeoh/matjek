@@ -31,5 +31,5 @@ void print_hi(string name) {
   printf("Hi, %s", name);
 }
 print_hi("Tom");
-#=> prints 'Hi, Tom' to STDOUT.
+/* prints 'Hi, Tom' to STDOUT. */
 {% endhighlight %}

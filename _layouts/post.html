@@ -1,9 +1,10 @@
 ---
 layout: default
+css: ["post.css"]
 ---
-<div class="post-info">
+<div id="post-info">
   <h3>{{page.title}}</h3>
-  <span><i class="material-icons">date_range</i>  {{page.date | date: "%d/%m/%Y %H:%M"}}</span>
+  <i class="material-icons">date_range</i><span>&#9;{{page.date | date: "%d/%m/%Y %H:%M"}}</span>
 </div>
 <div class="row">
   <div class="col s12">

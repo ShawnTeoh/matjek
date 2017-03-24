@@ -1,16 +1,18 @@
 ---
-layout: default
+layout: page
+css: ["index.css"]
 ---
 <div class="row">
 {% for post in site.posts %}
     <div class="col s12">
-      <div class="card">
+      <div class="card hoverable">
         <div class="card-content">
-          <span class="card-title tooltipped" data-position="top" data-delay="20" data-tooltip="{{post.date | date: "%d/%m/%Y %H:%M"}}">{{ post.title }}</span>
-          <p>{{ post.excerpt }}</p>
+          <span id="post-title" class="card-title">{{post.title}}</span>
+          <p id="post-date"><i class="material-icons">date_range</i>&#9;{{post.date | date: "%d/%m/%Y %H:%M"}}</p>
+          <p id="post-content">{{post.excerpt | remove: '<p>' | remove: '</p>'}}</p>
         </div>
         <div class="card-action">
-          <a href="{{ post.url | prepend: site.baseurl }}">
+          <a href="{{post.url | prepend: site.baseurl}}">
             Read More
           </a>
         </div>
