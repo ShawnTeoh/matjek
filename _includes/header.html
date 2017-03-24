@@ -10,19 +10,19 @@
       {{ site.title | escape }}
       {% endif %}
     </title>
-    <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/assets/res/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/assets/res/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{{site.baseurl}}/css/style.css">
     {% for css in layout.css %}
-    {% if css contains "://" %}
+    {% if css contains "//" %}
     <link rel="stylesheet" href="{{css}}">
     {% else %}
     <link rel="stylesheet" href="{{site.baseurl}}/css/{{css}}">
     {% endif %}
     {% endfor %}
     {% for css in page.css %}
-    {% if css contains "://" %}
+    {% if css contains "//" %}
     <link rel="stylesheet" href="{{css}}">
     {% else %}
     <link rel="stylesheet" href="{{site.baseurl}}/css/{{css}}">
