@@ -8,7 +8,10 @@ css: ["index.css"]
       <div class="card hoverable">
         <div class="card-content">
           <span id="post-title" class="card-title">{{post.title}}</span>
-          <p id="post-date"><i class="material-icons">date_range</i>&#9;{{post.date | date: "%d/%m/%Y %H:%M"}}</p>
+          <p id="post-date">
+            <i class="material-icons">date_range</i>
+            {{post.date | date: "%d/%m/%Y %H:%M"}}
+          </p>
           <p id="post-content">{{post.excerpt | remove: '<p>' | remove: '</p>'}}</p>
         </div>
         <div class="card-action">
