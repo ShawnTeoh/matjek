@@ -1,0 +1,23 @@
+<div class="col s12 tag-div">
+  <div class="tag-list">
+    {% for tag in site.tags %}
+    <a class="tag-chip" href="#{{tag[0] | slugify}}"><div class="chip z-depth-1">{{tag[0]}}</div></a>
+    {% endfor %}
+  </div>
+  <div class="divider"></div>
+  <div class="tag-index">
+    {% for tag in site.tags %}
+    <h4 id="{{tag[0] | slugify}}">{{tag[0]}}</h4>
+    <ul class="tag-post">
+      {% for post in tag[1] %}
+      <a class="post-title" href="{{site.baseurl}}{{post.url}}" target="_blank">
+        <li>
+          {{post.title}}
+          <small class="post-date">{{post.date | date_to_string}}</small>
+        </li>
+      </a>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>

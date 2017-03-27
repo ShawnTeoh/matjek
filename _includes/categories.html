@@ -1,0 +1,23 @@
+<div class="col s12 cat-div">
+  <div class="cat-list">
+    {% for cat in site.categories %}
+    <a class="cat-chip" href="#{{cat[0] | slugify}}"><div class="chip z-depth-1">{{cat[0]}}</div></a>
+    {% endfor %}
+  </div>
+  <div class="divider"></div>
+  <div class="cat-index">
+    {% for cat in site.categories %}
+    <h4 id="{{cat[0] | slugify}}">{{cat[0]}}</h4>
+    <ul class="cat-post">
+      {% for post in cat[1] %}
+      <a class="post-title" href="{{site.baseurl}}{{post.url}}" target="_blank">
+        <li>
+          {{post.title}}
+          <small class="post-date">{{post.date | date_to_string}}</small>
+        </li>
+      </a>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>

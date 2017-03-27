@@ -1,0 +1,47 @@
+---
+---
+@mixin transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+.cat-chip
+  color: #616161
+  margin-right: 5px
+  text-decoration: none
+
+  &:hover
+    div
+      color: #fff
+      background-color: #616161
+
+  div
+    @include transition(all .3s ease-in-out)
+
+.cat-div
+  .divider
+    margin: 20px 0
+
+.post-date
+  margin-left: 10px
+
+ul
+  &:not(.browser-default)
+    &.cat-post
+      padding-left: 0
+
+      a
+        text-decoration: none
+        color: #00695c
+
+      li
+        list-style-position: inside
+        padding-left: 40px
+
+        &:hover
+          list-style-type: circle
+          padding-left: 20px
+
+        @include transition(all .2s ease-in-out)

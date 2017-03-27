@@ -33,21 +33,24 @@ header
   a:hover
     text-decoration: none
 
-a.button-collapse.top-nav
-  position: absolute
-  text-align: center
-  height: 48px
-  width: 48px
-  top: 0
-  float: none
-  color: #fff
-  font-size: 36px
-  z-index: 999
-  line-height: 80px
+a
+  &.button-collapse
+    &.top-nav
+      position: absolute
+      text-align: center
+      height: 48px
+      width: 48px
+      top: 0
+      float: none
+      color: #fff
+      font-size: 36px
+      z-index: 999
+      line-height: 80px
 
 nav 
   .page-title
     font-size: 36px
+    font-weight: bold
 
 nav.top-nav
   height: 80px
@@ -69,6 +72,14 @@ footer.page-footer
 blockquote
   border-left-color: teal
 
+main
+  ul
+    &:not(.browser-default)
+      padding-left: 40px
+
+      li
+        list-style-type: disc
+
 @media only screen and (max-width: 992px)
   header,
   main,
@@ -76,5 +87,5 @@ blockquote
     padding-left: 0
 
   nav 
-  .nav-wrapper
-    text-align: center
+    .nav-wrapper
+      text-align: center
