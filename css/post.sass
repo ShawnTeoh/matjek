@@ -1,16 +1,57 @@
 ---
 ---
+@mixin transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
 main
   div
-    .row
-      margin-top: 20px
+    .divider
+      margin: 10px 0
 
 #post-info
   h3
     font-weight: bold
-    margin-bottom: 5px
-  i
-    font-size: 11.5px
-    margin-right: 10px
-  span,
+    margin-bottom: 15px
+
+  ul
+    &:not(.browser-default)
+      padding-left: 0
+      width: 40%
+
+      li
+        list-style-type: none
+
+  span
     font-size: 14px
+    display: block
+    margin-bottom: 5px
+
+    i
+      font-size: 11.5px
+      margin-right: 10px
+
+      &#indicate
+        font-size: 20px
+
+    .chip
+      color: #616161
+      margin-right: 5px
+
+      &:hover
+        color: #fff
+        background-color: #616161
+
+      @include transition(all .3s ease-in-out)
+
+@media only screen and (max-width: 992px)
+  #post-info
+    h3
+      text-align: center
+
+    ul
+      &:not(.browser-default)
+        width: 100%

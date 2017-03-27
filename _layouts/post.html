@@ -4,8 +4,33 @@ css: ["post.css"]
 ---
 <div id="post-info">
   <h3>{{page.title}}</h3>
-  <i class="material-icons">date_range</i><span>&#9;{{page.date | date: "%d/%m/%Y %H:%M"}}</span>
+  <ul class="collapsible hoverable" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Date">date_range</i>
+          {{page.date | date: "%d/%m/%Y %H:%M"}}
+          <i id="indicate" class="right material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Show extra info">info</i>
+        </span>
+      </div>
+      <div class="collapsible-body">
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Categories">sort</i>
+          {% for cat in page.categories %}
+          <a href="{{site.baseurl}}/categories#{{cat | slugify}}" target="_blank"><div class="chip">{{cat}}</div></a>
+          {% endfor %}
+        </span>
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Tags">label</i>
+          {% for tag in page.tags %}
+          <a href="{{site.baseurl}}/tags#{{tag | slugify}}" target="_blank"><div class="chip">{{tag}}</div></a>
+          {% endfor %}
+        </span>
+      </div>
+    </li>
+  </ul>
 </div>
+<div class="divider"></div>
 <div class="row">
   <div class="col s12">
     {{ content }}
