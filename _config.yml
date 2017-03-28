@@ -20,6 +20,7 @@ baseurl: "/matjek"
 url: "https://shawnteoh.github.io"
 permalink: /:year/:month/:day/:title
 repository: ShawnTeoh/matjek
+paginate: 5
 
 # MatJek specific configurations
 github_profile: "https://github.com/ShawnTeoh"
@@ -33,6 +34,7 @@ disqus_shortname: "matjek"
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock

@@ -5,6 +5,16 @@ main
     .row
       margin-top: 20px
 
+  ul
+    &:not(.browser-default)
+      &.pagination
+        padding-left: 0
+
+        li
+          a
+            &:hover
+              text-decoration: none
+
 #post-title
   margin-bottom: 2px
   font-weight: bold
