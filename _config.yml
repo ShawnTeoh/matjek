@@ -18,12 +18,14 @@ description: > # this means to ignore newlines until "baseurl:"
   Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
 baseurl: "/matjek"
 url: "https://shawnteoh.github.io"
+permalink: /:year/:month/:day/:title
+repository: ShawnTeoh/matjek
+
+# MatJek specific configurations
 github_profile: "https://github.com/ShawnTeoh"
 user: "John Doe"
 user_email: "john@doe.com"
 contact_url: "https://goo.gl/tVljbV"
-repository: ShawnTeoh/matjek
-permalink: /:year/:month/:day/:title
 google_tracking_id: "UA-96359860-1"
 disqus_shortname: "matjek"
 
