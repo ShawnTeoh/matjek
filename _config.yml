@@ -24,6 +24,8 @@ user_email: "john@doe.com"
 contact_url: "https://goo.gl/tVljbV"
 repository: ShawnTeoh/matjek
 permalink: /:year/:month/:day/:title
+google_tracking_id: "UA-96359860-1"
+disqus_shortname: "matjek"
 
 # Build settings
 markdown: kramdown
