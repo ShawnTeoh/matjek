@@ -51,12 +51,11 @@ nav
   .page-title
     font-size: 36px
     font-weight: bold
-
-nav.top-nav
-  height: 80px
-  
-  .page-title
     line-height: 80px
+
+nav
+  &.top-nav
+    height: 80px
 
 // Footer
 footer.page-footer
@@ -89,3 +88,8 @@ main
   nav 
     .nav-wrapper
       text-align: center
+
+@media only screen and (max-width: 600px)
+  nav
+    .page-title
+      font-size: 20px
