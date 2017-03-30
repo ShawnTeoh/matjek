@@ -1,6 +1,13 @@
 {% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse  %}
+<div class="col s12 switch">
+  <label>
+    Show forked projects
+    <input class="fork-switch" type="checkbox" checked="1" onchange="toggleForked()">
+    <span class="lever"></span>
+  </label>
+</div>
 {% for repo in sorted_repos %}
-<div class="col s12 m6 l4">
+<div class="col s12 m6 l4" {% if repo.fork %}id="forked"{% endif %}>
   <div class="card hoverable">
     <div class="card-image waves-effect waves-block waves-light geopattern activator" data-pattern-id="{{repo.name}}">
       <i class="material-icons waves-effect waves-block waves-light">more_vert</i>
