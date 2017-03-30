@@ -17,12 +17,12 @@ Clone or fork this repo and edit `_config.yml` as needed.
 
 ## Configuration
 
-Most of the configurations can be found in `_config.yml`. If you are not using `google_tracking_id` or `disqus_shortname`, just remove them completely.
+Most of the configurations can be found in `_config.yml`. The configurations listed below are specific to MatJek. If you are not using `google_tracking_id` or `disqus_shortname`, just remove them completely.
 
 ```yaml
 github_profile: "github_profile_url"
 user: "your_name" # Appears at sidebar
-user_email: "your_email" # Appears at sidebar
+user_email: "your_email" # Appears at sidebar, remove whole variable if unwanted
 contact_url: "google_form_link"
 google_tracking_id: "google_analytics_ID"
 disqus_shortname: "shortname_given_by_Disqus"
@@ -30,7 +30,7 @@ disqus_shortname: "shortname_given_by_Disqus"
 
 Edit the images in `assets/res` to suit your liking, but try to stick to the original resolutions.
 
-If you would like to enable comments in a post (disqus_shortname must be provided), add this line to the front matter of the post
+If you would like to enable comments in a post (disqus_shortname must be provided), add this line to the front matter of the post.
 
 ```yaml
 comments: 1
