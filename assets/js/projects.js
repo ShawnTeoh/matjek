@@ -6,8 +6,8 @@ $(document).ready(function(){
 
 function toggleForked(){
   if ($('.fork-switch').prop('checked')) {
-    $('#forked').removeClass('hidden');
+    $('div[id=forked]').removeClass('hidden');
   } else {
-    $('#forked').addClass('hidden');
+    $('div[id=forked]').addClass('hidden');
   }
 }
