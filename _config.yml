@@ -28,6 +28,7 @@ user: "John Doe"
 user_email: "john@doe.com"
 contact_url: "https://goo.gl/tVljbV"
 google_tracking_id: "UA-96359860-1"
+google_site_verification: "UA-96359860-1"
 disqus_shortname: "matjek"
 
 # Build settings
@@ -35,6 +36,7 @@ markdown: kramdown
 gems:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock
