@@ -1,5 +1,3 @@
 $(document).ready(function(){
-  $(".button-collapse").sideNav({
-    menuWidth: 280
-  });
+  $(".button-collapse").sideNav();
 });
