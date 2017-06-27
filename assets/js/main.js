@@ -1,3 +1,5 @@
-(function(){
-  $(".button-collapse").sideNav();
-})();
+(function($){
+  $(function(){
+    $(".button-collapse").sideNav();
+  });
+})(jQuery);
