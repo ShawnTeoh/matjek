@@ -15,9 +15,7 @@ css: ["index.css"]
         <p id="post-content">{{post.excerpt | remove: '<p>' | remove: '</p>'}}</p>
       </div>
       <div class="card-action">
-        <a href="{{post.url | prepend: site.baseurl}}">
-          Read More
-        </a>
+        <a href="{{post.url | prepend: site.baseurl}}" class="waves-effect waves-light btn orange">Read More</a>
       </div>
     </div>
   </div>
