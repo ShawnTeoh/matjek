@@ -33,7 +33,7 @@ disqus_shortname: "matjek"
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
