@@ -31,6 +31,21 @@ google_tracking_id: "UA-96359860-1"
 google_site_verification: "UA-96359860-1"
 disqus_shortname: "matjek"
 
+# Social Links
+social:
+  #github: 
+  #bitbucket: 
+  #hacker_news: 
+  #stackexchange: 
+  #stackoverflow: 
+  #twitter: 
+  #facebook: 
+  #tumblr: 
+  #linkedin: 
+  #gplus: 
+  #gravatar: 
+  #flickr: 
+
 # Build settings
 markdown: kramdown
 gems:
