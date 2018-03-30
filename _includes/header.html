@@ -54,6 +54,73 @@
             <a href="{{site.github_profile}}" target="_blank"><img class="circle z-depth-2" src="{{site.baseurl}}/assets/res/user.png"></a>
             <span class="white-text name">{{site.user}}</span>
             <span class="white-text email">{{site.user_email}}</span>
+            <span class="white-text" style="font-size:2em;">
+              {% if site.social.github %}
+              <a title="{{site.social.github}} on GitHub" href="https://github.com/{{site.social.github}}">
+                <i class="fab fa-github"></i>
+              </a>
+              {% endif %}
+              
+              {% if site.social.bitbucket %}
+              <a title="{{site.social.bitbucket}} on BitBucket" href="https://bitbucket.com/{{site.social.bitbucket}}">
+                <i class="fab fa-bitbucket"></i>
+              </a>
+              {% endif %}
+              
+              {% if site.social.hacker_news %}
+              <a title="{{site.social.hacker_news}} on Hacker News" href="https://news.ycombinator.com/user?id={{site.social.hacker_news}}">
+                <i class="fab fa-hacker-news"></i>
+              </a>
+              {% endif %}
+              
+              {% if site.social.stackexchange %}
+               <a title="{{site.user}} on Stack Exchange" href="https://stackexchange.com/users/{{site.social.stackexchange}}">
+                 <i class="fab fa-stack-exchange"></i>
+               </a>
+              {% endif %}
+              
+              {% if site.social.stackoverflow %}
+              <a title="{{site.user}} on Stack Overflow" href="http://stackoverflow.com/users/{{site.social.stackoverflow}}">
+                <i class="fab fa-stack-overflow"></i>
+              </a>
+              {% endif %}
+              
+              {% if site.social.twitter %}
+              <a title="{{site.social.twitter}} on Twitter" href="https://twitter.com/{{site.social.twitter}}">
+                <i class="fab fa-twitter"></i>
+              </a>
+              {% endif %}
+              
+              {% if site.social.facebook %}
+              <a title="{{site.user}} on Facebook" href="https://facebook.com/{{site.social.facebook}}">
+                <i class="fab fa-facebook"></i>
+              </a>
+              {% endif %}
+              
+              {% if site.social.tumblr %}
+              <a title="{{site.user}} on Tumblr" href="https://{{site.social.tumblr}}.tumblr.com">
+                <i class="fab fa-tumblr"></i>
+              </a>
+              {% endif %}
+              
+              {% if site.social.linkedin %}
+              <a title="{{site.user}} on LinkedIn" href="https://www.linkedin.com/in/{{site.social.linkedin}}">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              {% endif %}
+              
+              {% if site.social.gplus %}
+              <a title="{{site.user}} on Google Plus" href="https://plus.google.com/{{site.social.gplus}}">
+                <i class="fab fa-google-plus"></i>
+              </a>
+             {% endif %}
+             
+             {% if site.social.flickr %}
+             <a title="{{site.user}} on Flickr" href="https://www.flickr.com/photos/{{site.social.flickr}}">
+               <i class="fab fa-flickr"></i>
+             </a>
+             {% endif %}
+            </span>
           </div>
         </li>
         <li><a class="waves-effect" href="{{site.baseurl}}/"><i class="material-icons">home</i>Home</a></li>
