@@ -1,27 +1,102 @@
 <div class="col s12 tag-div">
   <div class="tag-list">
-    {% for tag in site.tags %}
-    {% capture test %}{{tag[0] | slice: 0}}{% endcapture %}
-    {% capture testup %}{{tag[0] | slice: 0 | upcase}}{% endcapture %}
-    <a class="tag-chip" href="#{{tag[0] | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip z-depth-1">{{tag[0]}}</div></a>
-    {% endfor %}
+
+    <a class="tag-chip" ><div class="chip z-depth-1">Web</div></a>
+    <a class="tag-chip" ><div class="chip z-depth-1">Information Retrieval</div></a>
+    <a class="tag-chip" ><div class="chip z-depth-1">Database</div></a>
+    <a class="tag-chip" ><div class="chip z-depth-1">Cloud</div></a>
+    <a class="tag-chip" ><div class="chip z-depth-1">Mobile</div></a>
+    
   </div>
   <div class="divider"></div>
   <div class="tag-index">
-    {% for tag in site.tags %}
-    {% capture test %}{{tag[0] | slice: 0}}{% endcapture %}
-    {% capture testup %}{{tag[0] | slice: 0 | upcase}}{% endcapture %}
-    <h4 id="{{tag[0] | slugify}}{% if test == testup %}_cap{% endif %}">{{tag[0]}}</h4>
+    
+    <h5 id="{{tag[0]}}">Languages</h5>
     <ul class="tag-post">
-      {% for post in tag[1] %}
-      <a class="post-title" href="{{site.baseurl}}{{post.url}}" target="_blank">
+      
+      <a class="post-title">
         <li>
-          {{post.title}}
-          <small class="post-date">{{post.date | date_to_string}}</small>
+          Java
+        </li>
+        <li>
+          JavaScript
+        </li>
+        <li>
+          Python
+        </li>
+        <li>
+          C/C++
+        </li>
+        <li>
+          HTML/CSS
+        </li>
+        <li>
+          SQL
+        </li>
+        <li>
+          Swift
         </li>
       </a>
-      {% endfor %}
+
     </ul>
-    {% endfor %}
+
+    <h5 id="{{tag[0]}}">Framework</h5>
+    <ul class="tag-post">
+      
+      <a class="post-title">
+        <li>
+          Node.js
+        </li>
+        <li>
+          React
+        </li>
+        <li>
+          Angular
+        </li>
+        <li>
+          REST
+        </li>
+        <li>
+          Spring MVC
+        </li>
+        <li>
+          Junit
+        </li>
+      </a>
+
+    </ul>
+
+
+    <h5 id="{{tag[0]}}">Others</h5>
+    <ul class="tag-post">
+      
+      <a class="post-title">
+        <li>
+          AWS
+        </li>
+        <li>
+          Solr
+        </li>
+        <li>
+          Git
+        </li>
+        <li>
+          MySQL
+        </li>
+        <li>
+          MongoDB
+        </li>
+        <li>
+          Derby
+        </li>
+        <li>
+          DynamoDB
+        </li>
+      </a>
+
+    </ul>
+
+
+
   </div>
 </div>

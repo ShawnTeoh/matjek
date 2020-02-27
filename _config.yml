@@ -13,23 +13,20 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MatJek
+title: Yan
 description: > # this means to ignore newlines until "baseurl:"
   Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
-baseurl: "/matjek"
+baseurl: "/yan"
 url: "https://shawnteoh.github.io"
 permalink: /:year/:month/:day/:title
-repository: ShawnTeoh/matjek
+repository: yzhao430
 paginate: 5
 
 # MatJek specific configurations
-github_profile: "https://github.com/ShawnTeoh"
-user: "John Doe"
-user_email: "john@doe.com"
-contact_url: "https://goo.gl/tVljbV"
-google_tracking_id: "UA-96359860-1"
-google_site_verification: "UA-96359860-1"
-disqus_shortname: "matjek"
+github_profile: "https://github.com/yzhao430"
+user: "Yan Zhao"
+user_email: "zhao.yan2@husky.neu.edu"
+contact_url: "https://docs.google.com/forms/d/e/1FAIpQLSd-tsGLT0oPxEMXaewikuU_VED5CYwhqGjFae_6W-Iaxj0MiA/viewform?vc=0&c=0&w=1"
 
 # Build settings
 markdown: kramdown

@@ -1,27 +1,34 @@
 <div class="col s12 cat-div">
   <div class="cat-list">
-    {% for cat in site.categories %}
-    {% capture test %}{{cat[0] | slice: 0}}{% endcapture %}
-    {% capture testup %}{{cat[0] | slice: 0 | upcase}}{% endcapture %}
-    <a class="cat-chip" href="#{{cat[0] | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip z-depth-1">{{cat[0]}}</div></a>
-    {% endfor %}
+
+    <a class="cat-chip"><div class="chip z-depth-1">Northeastern University</div></a>
+    <a class="cat-chip"><div class="chip z-depth-1">Texas A & M University</div></a>
+    <a class="cat-chip"><div class="chip z-depth-1">Tongji University</div></a>
+
   </div>
   <div class="divider"></div>
   <div class="cat-index">
-    {% for cat in site.categories %}
-    {% capture test %}{{cat[0] | slice: 0}}{% endcapture %}
-    {% capture testup %}{{cat[0] | slice: 0 | upcase}}{% endcapture %}
-    <h4 id="{{cat[0] | slugify}}{% if test == testup %}_cap{% endif %}">{{cat[0]}}</h4>
+
+    <h5 id="{{cat[0]}}">Northeastern University</h5>
     <ul class="cat-post">
-      {% for post in cat[1] %}
-      <a class="post-title" href="{{site.baseurl}}{{post.url}}" target="_blank">
+ 
+      <a class="post-title" >
         <li>
-          {{post.title}}
-          <small class="post-date">{{post.date | date_to_string}}</small>
+          Master of Computer Science   GPA 3.75/4.0
         </li>
       </a>
-      {% endfor %}
+
     </ul>
-    {% endfor %}
+    <h5 id="{{cat[0]}}">Tongji University</h5>
+    <ul class="cat-post">
+ 
+      <a class="post-title" >
+        <li>
+          Bachelor of Engineering  GPA: 3.5/4.0
+        </li>
+      </a>
+
+    </ul>
+
   </div>
 </div>
