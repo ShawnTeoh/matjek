@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "This is Just Another Post"
+title:  "This is Just Another POST EDIT >_<"
 date:   2017-03-25 01:30:13 +0800
 categories: default
 tags: test
